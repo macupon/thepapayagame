@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import PlayersList from './components/PlayersList/PlayersList';
 import './App.css';
+// import { useContext, useState } from 'react';
+// import { PlayersContext } from './contexts/PlayersContext';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className='header-div'>
+        <h1>WELCOME</h1>
       </header>
+      <div>
+        <h2>Players:</h2>
+      </div>
+      <div className='cards-list-div'>
+        <PlayersList/>
+      </div>
     </div>
   );
 }

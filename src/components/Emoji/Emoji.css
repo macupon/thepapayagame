@@ -1,0 +1,12 @@
+.emoji-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    margin-top: -70px;
+    margin-bottom: 0px;
+    border-radius: 50%;
+    background-color: rgb(191, 191, 63);
+    font-size: 70px;
+}

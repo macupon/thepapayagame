@@ -1,0 +1,16 @@
+#penis-img {
+    background-image: url('/src/assets/img/penis.png');
+    height: 80px;
+    width: 80px;
+    background-color:rgb(229, 240, 241);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#penis-img:hover {
+    border: 2px;
+    border-radius: 10px;
+    border-color: rgba(132, 155, 157, 0.327);
+    border-style:solid;
+}
