@@ -8,7 +8,7 @@ export default function Vagina(propsObj) {
 
   const {player, prop2change} = propsObj
 
-  function activateVagina() {
+  function onClickVagina() {
 
       const updatedPlayersArray = playersArray.map((item) => {
         if ((item.id === player.id) && (item[prop2change] !== "vagina")) {
@@ -19,14 +19,40 @@ export default function Vagina(propsObj) {
         }
       });
       setplayersArray([...updatedPlayersArray]);
+
+      // update class
+      const button = document.getElementById(`btn-vagina-${prop2change}-${player.id}`);
+    
+      // Alternar entre las clases
+      button.classList.toggle('selected');
     }
+
+    function getClass() {
+      if (prop2change === "have"){
+        if (player.have==="vagina"){
+          return "vagina-img selected"
+        }
+        else{
+          return "vagina-img"
+        }
+      }
+      else if (prop2change === "into"){
+        if (player.into==="penis" || player.into==="both"){
+          return "vagina-img selected"
+        }
+        else{
+          return "vagina-img"
+        }
+      }
+    }
+  
 
   return (
     <div className='vagpenis-div'>
       <button
-        id="vagina-img"
-        className='vagpenis-img'
-        onClick={()=> activateVagina()}
+        id={`btn-vagina-${prop2change}-${player.id}`}
+        className={getClass()}
+        onClick={()=> onClickVagina()}
       ></button>
     </div>
   )
