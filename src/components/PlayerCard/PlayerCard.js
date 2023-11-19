@@ -26,7 +26,7 @@ export default function PlayeCard(propsObj) {
         I have: 
       </p>
       <div>
-        <IntoHave player={player} prop2change={'have'}/>
+        <IntoHave player={player} prop2change={'has'}/>
       </div>
       <p className='haveInto-text'>
         I am into: 
@@ -37,7 +37,11 @@ export default function PlayeCard(propsObj) {
       <button
         className='btnRemove'
         id={`btnRemove${player.id}`}
-        onClick={()=> removePlayerBtn(player.id)}>Remove Player</button>
+        onClick={()=> removePlayerBtn(player.id)}>Remove Player
+      </button>
+      <div id={`numPotentialMatches-${player.id}`}>
+        Interacts with: {player.numPotentialMatches}
+      </div>
     </div>
   )
 }

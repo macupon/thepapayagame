@@ -8,16 +8,16 @@
     background-position: center;
 }
 
-.penis-img:hover {
+/* .penis-img:hover {
     border: 2px;
     border-radius: 10px;
     border-color: rgba(132, 155, 157, 0.327);
     border-style:solid;
-}
+} */
 
 .penis-img.selected {
     border: 2px;
     border-radius: 10px;
-    border-color: rgba(132, 155, 157, 0.327);
+    border-color: rgb(241, 223, 84);
     border-style:solid;
 }

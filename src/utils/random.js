@@ -66,7 +66,7 @@ export function randSex() {
     
 
 export function randInterest() {
-    const interests = ["penis","vagina", "Both"]
+    const interests = ["penis","vagina", "both"]
     return interests[Math.floor(Math.random() * interests.length)];
 }
 

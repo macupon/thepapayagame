@@ -11,32 +11,65 @@ export default function Penis(propsObj) {
  
   function onClickPenis() {
 
-    const updatedPlayersArray = playersArray.map((item) => {
-      if ((item.id === player.id) && (item[prop2change] !== "penis")) {
-        return { ...item, [prop2change]: "penis" };
-      }
-      else {
-        return item;
-      }
-    });
-    setplayersArray([...updatedPlayersArray]);
+    if (prop2change === "has"){
 
-    // update class
-    const button = document.getElementById(`btn-penis-${prop2change}-${player.id}`);
+      const updatedPlayersArray = playersArray.map((item) => {
+        if ((item.id === player.id) && (item[prop2change] !== "penis")) {
+          return { ...item, [prop2change]: "penis" };
+        }
+        else {
+          return item;
+        }
+        }
+      )
+      setplayersArray([...updatedPlayersArray]);
+    };
+
+    if (prop2change === "into"){
+      const btnVag = document.getElementById(`btn-vagina-into-${player.id}`);
+      const btnVagClasse = btnVag.className
+      const btnPenis = document.getElementById(`btn-penis-into-${player.id}`);
+      const btnPenisClasse = btnPenis.className
+
+      const updatedPlayersArray = playersArray.map((item) => {
+        if (item.id === player.id) {
+
+          if (btnVagClasse === "vagina-img selected" && btnPenisClasse === "penis-img selected")
+            return {...item, [prop2change]:"vagina"};
+
+          else if (btnVagClasse === "vagina-img" && btnPenisClasse === "penis-img selected")
+            return item;
+
+          // This situation shouldn't exist: there is always at least one selected
+          else if (btnVagClasse === "vagina-img" && btnPenisClasse === "penis-img")
+            return {...item, [prop2change]:"penis"};
+
+          else if (btnVagClasse === "vagina-img selected" && btnPenisClasse === "penis-img")
+            return {...item, [prop2change]:"both"};
+        }
+        else {
+          return item;
+        }
+      })
     
-    // Alternar entre las clases
-    button.classList.toggle('selected');
+      setplayersArray([...updatedPlayersArray]);
+    };
+
+    
   }
+
+
   
   function getClass() {
-    if (prop2change === "have"){
-      if (player.have==="penis"){
+    if (prop2change === "has"){
+      if (player.has==="penis"){
         return "penis-img selected"
       }
       else{
         return "penis-img"
       }
     }
+
     else if (prop2change === "into"){
       if (player.into==="penis" || player.into==="both"){
         return "penis-img selected"
@@ -45,6 +78,7 @@ export default function Penis(propsObj) {
         return "penis-img"
       }
     }
+
   }
 
   return (
