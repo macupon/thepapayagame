@@ -1,22 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./PlayersList.css";
-import {updatePontentialMatches} from '../../utils/players.js';
+// import {makeNewPlayer} from '../../utils/players.js';
 
 import PlayerCard from "../PlayerCard/PlayerCard";
 import { PlayersContext } from "../../contexts/PlayersContext";
 
 export default function PlayersList() {
-  const { playersArray, addPlayer } = useContext(PlayersContext);
+  const { playersArray, addPlayer, updateNumPontentialMatches} = useContext(PlayersContext);
 
-  const onClickAddPlayer = () => {
-    addPlayer();               // add new player
+  useEffect(() => {
     console.log(playersArray)
-    updatePontentialMatches();  // update potential interactions
-  };
+    // updateNumPontentialMatches()
+  }, [playersArray])
+
+  // useEffect(() => {
+  //   updateNumPontentialMatches()
+  // }, [])
 
   return (
     <div>
-      <button id="btn-addPlayer" onClick={() => onClickAddPlayer()}>
+      <button id="btn-addPlayer" onClick={() => addPlayer()}>
         Add Player
       </button>
 

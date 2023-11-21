@@ -20,6 +20,7 @@ export default function PlayeCard(propsObj) {
         type='text'
         id={`inputName${player.id}`}
         placeholder={`Player ${player.id}`}
+        maxlength="15"
         onBlur={(event) => updatePlayerName(player.id, event.target.value)}>
       </input>
       <p className='haveInto-text'>

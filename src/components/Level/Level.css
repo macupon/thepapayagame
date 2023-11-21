@@ -1,0 +1,9 @@
+.btn-level{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(246, 221, 151);
+    margin: 60px;
+    border: none;
+    font-size: 25px;
+}

@@ -1,6 +1,7 @@
 import './Penis.css';
 import React, { useContext } from 'react'
 import { PlayersContext } from '../../contexts/PlayersContext';
+import {updateNumPontentialMatches} from '../../utils/players';
 
 export default function Penis(propsObj) {
 
@@ -11,9 +12,11 @@ export default function Penis(propsObj) {
  
   function onClickPenis() {
 
+    let updatedPlayersArray
+
     if (prop2change === "has"){
 
-      const updatedPlayersArray = playersArray.map((item) => {
+      updatedPlayersArray = playersArray.map((item) => {
         if ((item.id === player.id) && (item[prop2change] !== "penis")) {
           return { ...item, [prop2change]: "penis" };
         }
@@ -22,7 +25,6 @@ export default function Penis(propsObj) {
         }
         }
       )
-      setplayersArray([...updatedPlayersArray]);
     };
 
     if (prop2change === "into"){
@@ -31,7 +33,7 @@ export default function Penis(propsObj) {
       const btnPenis = document.getElementById(`btn-penis-into-${player.id}`);
       const btnPenisClasse = btnPenis.className
 
-      const updatedPlayersArray = playersArray.map((item) => {
+      updatedPlayersArray = playersArray.map((item) => {
         if (item.id === player.id) {
 
           if (btnVagClasse === "vagina-img selected" && btnPenisClasse === "penis-img selected")
@@ -51,11 +53,11 @@ export default function Penis(propsObj) {
           return item;
         }
       })
-    
-      setplayersArray([...updatedPlayersArray]);
     };
 
-    
+    // update the array with the new potential interactions
+    updatedPlayersArray = updateNumPontentialMatches(updatedPlayersArray)
+    setplayersArray([...updatedPlayersArray]);
   }
 
 

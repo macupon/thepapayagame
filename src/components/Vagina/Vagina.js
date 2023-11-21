@@ -1,6 +1,7 @@
 import './Vagina.css';
 import React, { useContext } from 'react'
 import { PlayersContext } from '../../contexts/PlayersContext';
+import {updateNumPontentialMatches} from '../../utils/players';
 
 export default function Vagina(propsObj) {
 
@@ -9,8 +10,11 @@ export default function Vagina(propsObj) {
   const {player, prop2change} = propsObj
 
   function onClickVagina() {
+
+    let updatedPlayersArray
+
     if (prop2change === "has"){
-      const updatedPlayersArray = playersArray.map((item) => {
+      updatedPlayersArray = playersArray.map((item) => {
         if ((item.id === player.id) && (item[prop2change] !== "vagina")) {
           return { ...item, [prop2change]: "vagina" };
         }
@@ -18,7 +22,6 @@ export default function Vagina(propsObj) {
           return item;
         }
       });
-      setplayersArray([...updatedPlayersArray]);
     }
 
     if (prop2change === "into"){
@@ -27,7 +30,7 @@ export default function Vagina(propsObj) {
       const btnPenis = document.getElementById(`btn-penis-into-${player.id}`);
       const btnPenisClasse = btnPenis.className
     
-      const updatedPlayersArray = playersArray.map((item) => {
+      updatedPlayersArray = playersArray.map((item) => {
         if (item.id === player.id) {
 
           if (btnVagClasse === "vagina-img selected" && btnPenisClasse === "penis-img selected")
@@ -47,10 +50,10 @@ export default function Vagina(propsObj) {
           return item;
         }
       })
-
-      setplayersArray([...updatedPlayersArray]);
     };
-    
+    // update the array with the new potential interactions
+    updatedPlayersArray = updateNumPontentialMatches(updatedPlayersArray)
+    setplayersArray([...updatedPlayersArray]);
     }
 
     function getClass() {

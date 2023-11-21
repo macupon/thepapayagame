@@ -1,6 +1,6 @@
 import { useContext,  createContext, useState } from "react";
 import {randSex, randInterest,getRandomEmoji , assignRandomColor} from '../utils/random';
-import {potentialMatches} from '../utils/players';
+import {updateNumPontentialMatches} from '../utils/players';
 
 // 1 Crear el Contexto
 // 2 Exportar el Contexto
@@ -39,10 +39,10 @@ export const PlayersContextProvider = ({children}) => {
     const [playersArray, setplayersArray] = useState(startingtArray);
 
 
-    function addPlayer () {
+    function addPlayer (callback) {
         // Create ID
         let idArray = [];
-        if (playersArray.length<4){
+        if (playersArray.length < 12){
             playersArray.forEach(player => {
                 idArray.push(player.id)
             });
@@ -72,10 +72,14 @@ export const PlayersContextProvider = ({children}) => {
                 numPotentialMatches: numPotentialMatches
             }
 
-            newPlayer.numPotentialMatches = potentialMatches(newPlayer, playersArray).length;
+            // Create new array with the new player
+            const newPlayersArray = [...playersArray, newPlayer]
 
-            // Add new players to players array 
-            setplayersArray(prevArray => [...prevArray, newPlayer])
+            // update the array with the new potential interactions
+            const updatedPlayersArray = updateNumPontentialMatches(newPlayersArray)
+
+            // update useState
+            setplayersArray(updatedPlayersArray) //updatePontentialMatches()
             
         } else {
             alert('this is an orgy!');
@@ -90,6 +94,7 @@ export const PlayersContextProvider = ({children}) => {
             }
             return player;
           });
+          // update useState
           setplayersArray([...updatedPlayersArray]);
     }
 
@@ -103,16 +108,19 @@ export const PlayersContextProvider = ({children}) => {
     }
 
 
+
+
     const contextValue = {
         playersArray,
         setplayersArray,
         updatePlayerName,
         removePlayerBtn,
         addPlayer,
+        // updateNumPontentialMatches
         // myGender
     };
 
-    // console.log(playersArray);
+
     
     return (
         <PlayersContext.Provider value={contextValue}>

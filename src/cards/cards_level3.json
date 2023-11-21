@@ -1,0 +1,115 @@
+[
+    {
+        "id": 1,
+        "level": 3,
+        "text": "PLAYER1 Card with ice cubes PLAYER2",
+        "from": "any",
+        "to": "any",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "iceCubes",
+        "undressing": false
+    },
+    {
+        "id": 2,
+        "level": 3,
+        "text": "PLAYER1 Card with handcuffs PLAYER2",
+        "from": "any",
+        "to": "any",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "handcuffs",
+        "undressing": false
+    },
+    {
+        "id": 3,
+        "level": 3,
+        "text": "PLAYER1 Card with strap-on PLAYER2",
+        "from": "any",
+        "to": "any",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "strapOn",
+        "undressing": false
+    },
+    {
+        "id": 4,
+        "level": 3,
+        "text": "PLAYER1 Card1 with vibrator PLAYER2",
+        "from": "any",
+        "to": "any",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "vibrator",
+        "undressing": false
+    },
+    {
+        "id": 5,
+        "level": 3,
+        "text": "PLAYER1 Card2 with ropes objects PLAYER2",
+        "from": "any",
+        "to": "any",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "ropes",
+        "undressing": false
+    },
+    {
+        "id": 6,
+        "level": 3,
+        "text": "PLAYER1 Card3 without objects PLAYER2",
+        "from": "any",
+        "to": "any",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 7,
+        "level": 3,
+        "text": "PLAYER1 Card4 without objects PLAYER2",
+        "from": "any",
+        "to": "any",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    }
+    ,
+    {
+        "id": 8,
+        "level": 3,
+        "text": "PLAYER1 Card5 without objects PLAYER2, PLAYER3",
+        "from": "any",
+        "to": "any",
+        "num_players": "3",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 9,
+        "level": 3,
+        "text": "PLAYER1 Card6 without objects PLAYER2, PLAYER3, PLAYER4",
+        "from": "any",
+        "to": "any",
+        "num_players": "4",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 10,
+        "level": 3,
+        "text": "PLAYER1 Card7 without objects PLAYER2, PLAYER3, PLAYER4, PLAYER5",
+        "from": "any",
+        "to": "any",
+        "num_players": "5",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    }
+
+
+]

@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "level": 1,
+        "text": "PLAYER1 touch PLAYER2 boobs",
+        "player_has": "",
+        "player_into": "vagina",
+        "others_have":"vagina",
+        "others_into":"",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 2,
+        "level": 1,
+        "text": "PLAYER1 touch your penis while watching PLAYER2 boobs",
+        "player_has": "penis",
+        "player_into": "",
+        "others_have":"vagina",
+        "others_into":"",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 3,
+        "level": 1,
+        "text": "PLAYER1 has boobs and touches PLAYER2 penis",
+        "player_has": "vagina",
+        "player_into": "penis",
+        "others_have":"penis",
+        "others_into":"vagina",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 4,
+        "level": 1,
+        "text": "PLAYER1 kiss PLAYER2",
+        "player_has": "",
+        "player_into": "",
+        "others_have":"",
+        "others_into":"",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 5,
+        "level": 1,
+        "text": "PLAYER1 touches PLAYER2 penis",
+        "player_has": "",
+        "player_into": "penis",
+        "others_have":"penis",
+        "others_into": "",
+        "num_players": "2",
+        "interaction": "strong",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 6,
+        "level": 1,
+        "text": "PLAYER1 rub your boobs with PLAYER2 boobs",
+        "player_has": "vagina",
+        "player_into": "vagina",
+        "others_have":"vagina",
+        "others_into":"vagina",
+        "num_players": "2",
+        "interaction": "soft",
+        "objects": "",
+        "undressing": false
+    },
+    {
+        "id": 331,
+        "level": 1,
+        "text": "PLAYER1, how big was the biggest penis you've ever touched?",
+        "player_has": "",
+        "player_into": "penis",
+        "others_have":"",
+        "others_into":"",
+        "num_players": "1",
+        "interaction": "soft",
+        "objects": "",
+        "undressing": false
+    }
+
+]
